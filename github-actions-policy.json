@@ -1,0 +1,67 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EC2FullAccess",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "VPCFullAccess",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:*Vpc*",
+        "ec2:*Subnet*",
+        "ec2:*Gateway*",
+        "ec2:*RouteTable*",
+        "ec2:*NetworkAcl*",
+        "ec2:*SecurityGroup*",
+        "ec2:*NetworkInterface*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ELBFullAccess",
+      "Effect": "Allow",
+      "Action": [
+        "elasticloadbalancing:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AutoScalingFullAccess",
+      "Effect": "Allow",
+      "Action": [
+        "autoscaling:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "IAMReadWrite",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:PassRole",
+        "iam:AttachRolePolicy",
+        "iam:DetachRolePolicy",
+        "iam:ListAttachedRolePolicies",
+        "iam:ListRolePolicies",
+        "iam:CreateInstanceProfile",
+        "iam:DeleteInstanceProfile",
+        "iam:GetInstanceProfile",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:ListInstanceProfiles",
+        "iam:ListInstanceProfilesForRole",
+        "iam:TagRole",
+        "iam:TagInstanceProfile"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
